@@ -1,0 +1,580 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --verde: #123d35;
+    --verde-claro: #286254;
+    --dorado: #d8b45a;
+    --fondo: #f5f7f6;
+    --texto: #26332f;
+    --gris: #63706c;
+    --blanco: white;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background: var(--fondo);
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    background: white;
+    min-height: 78px;
+    padding: 12px 6%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px #00000015;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: auto;
+}
+
+.logo span {
+    width: 45px;
+    height: 45px;
+    background: var(--verde);
+    color: var(--dorado);
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo b,
+.logo small {
+    display: block;
+}
+
+.logo small {
+    color: #77827e;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+
+nav {
+    display: flex;
+    gap: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #34443f;
+    font-weight: bold;
+    padding: 12px 9px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: var(--verde);
+    border-bottom-color: var(--dorado);
+}
+
+
+.acceso {
+    border: 0;
+    background: var(--verde);
+    color: white;
+    padding: 13px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.acceso:hover {
+    background: var(--verde-claro);
+}
+
+
+.menu-btn {
+    display: none;
+    border: 0;
+    background: transparent;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+
+/* ================= PAGINAS ================= */
+
+.pagina {
+    display: none;
+    min-height: 600px;
+    padding: 65px 7%;
+}
+
+.pagina.activa {
+    display: block;
+}
+
+
+/* ================= INICIO ================= */
+
+.hero {
+    min-height: 510px;
+    margin: -65px -7% 0;
+    padding: 70px 7%;
+
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 50px;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            120deg,
+            #e8f0ec,
+            #faf8ef
+        );
+}
+
+
+.subtitulo {
+    color: #8b6a1f;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: var(--verde);
+}
+
+.hero-text > p {
+    color: var(--gris);
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+
+.boton {
+    border: 0;
+    background: var(--verde);
+    color: white;
+    padding: 13px 21px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: var(--verde-claro);
+}
+
+
+/* ================= TARJETAS VISUALES ================= */
+
+.tarjeta-principal,
+.tarjeta-visual {
+    background:
+        linear-gradient(
+            135deg,
+            var(--verde),
+            var(--verde-claro)
+        );
+
+    color: white;
+    border-radius: 22px;
+    padding: 28px;
+
+    min-height: 260px;
+
+    box-shadow:
+        0 20px 45px #123d3540;
+}
+
+
+.tarjeta-arriba,
+.tarjeta-abajo {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.chip {
+    width: 48px;
+    height: 35px;
+    border-radius: 7px;
+    background: var(--dorado);
+    margin: 55px 0 25px;
+}
+
+
+.numero {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+
+.tarjeta-abajo {
+    margin-top: 35px;
+    font-size: 12px;
+}
+
+
+/* ================= DESTACADOS ================= */
+
+.destacados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 45px;
+}
+
+
+.destacado,
+.producto,
+.sobre {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #0000000d;
+}
+
+
+.destacado p,
+.producto p,
+.sobre p {
+    color: var(--gris);
+    line-height: 1.7;
+}
+
+
+.destacado button {
+    border: 0;
+    background: transparent;
+    color: var(--verde);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* ================= TITULOS ================= */
+
+.titulo {
+    margin-bottom: 35px;
+}
+
+.titulo h2,
+.digital h2 {
+    font-size: 42px;
+    margin: 8px 0 12px;
+}
+
+.titulo > p:last-child {
+    color: var(--gris);
+}
+
+
+/* ================= PRODUCTOS ================= */
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+
+.icono {
+    font-size: 32px;
+    color: #a98326;
+    margin-bottom: 10px;
+}
+
+
+.borde {
+    background: transparent;
+    border: 1px solid var(--verde);
+    color: var(--verde);
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.borde:hover {
+    background: var(--verde);
+    color: white;
+}
+
+
+/* ================= TARJETAS ================= */
+
+.tarjetas-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+
+.informacion {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+}
+
+
+.informacion li {
+    margin: 13px 0;
+}
+
+
+/* ================= BANCA DIGITAL ================= */
+
+.digital {
+    background: #e6efea;
+    border-radius: 20px;
+    padding: 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+    align-items: center;
+}
+
+
+.digital > div:first-child > p {
+    color: var(--gris);
+    line-height: 1.7;
+}
+
+
+.funciones {
+    display: grid;
+    gap: 12px;
+    margin: 25px 0;
+    color: var(--verde);
+    font-weight: bold;
+}
+
+
+.telefono {
+    width: 240px;
+    height: 440px;
+    background: #111;
+    border: 8px solid #222;
+    border-radius: 35px;
+    padding: 14px;
+    margin: auto;
+}
+
+
+.pantalla {
+    background: #f0f4f1;
+    height: 100%;
+    border-radius: 20px;
+    padding: 25px 15px;
+}
+
+
+.pantalla h3 {
+    font-size: 24px;
+}
+
+
+/* ================= NOSOTROS ================= */
+
+.valores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+
+.valores div {
+    background: #f0f4f1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* ================= FORMULARIO ================= */
+
+form {
+    max-width: 650px;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+}
+
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+
+input,
+textarea {
+    width: 100%;
+    display: block;
+    margin-top: 7px;
+    padding: 13px;
+    border: 1px solid #ccd4d1;
+    border-radius: 6px;
+    font: inherit;
+}
+
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #102d28;
+    color: white;
+    padding: 30px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+footer p,
+footer small {
+    color: #bdc9c5;
+}
+
+
+/* ================= VENTANA ================= */
+
+.ventana {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: #00000099;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 200;
+}
+
+
+.ventana.mostrar {
+    display: flex;
+}
+
+
+.ventana-contenido {
+    width: min(90%, 500px);
+    background: white;
+    border-radius: 15px;
+    padding: 35px;
+    position: relative;
+}
+
+
+.cerrar {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+
+    background: transparent;
+    border: 0;
+
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 950px) {
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    nav.mostrar-menu {
+        display: flex;
+    }
+
+    .acceso {
+        display: none;
+    }
+
+    .hero,
+    .tarjetas-contenido,
+    .digital {
+        grid-template-columns: 1fr;
+    }
+
+    .destacados,
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .valores {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .pagina {
+        padding: 45px 5%;
+    }
+
+    .hero {
+        margin: -45px -5% 0;
+        padding: 50px 5%;
+    }
+
+    .digital {
+        padding: 30px 20px;
+    }
+
+    .titulo h2,
+    .digital h2 {
+        font-size: 32px;
+    }
+
+}

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco NovaRD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <span>N</span>
+        <div>
+            <b>Banco NovaRD</b>
+            <small>Soluciones para avanzar</small>
+        </div>
+    </div>
+
+    <button class="menu-btn" onclick="abrirMenu()">☰</button>
+
+    <nav id="menu">
+        <a href="#" onclick="mostrar('inicio')">Inicio</a>
+        <a href="#" onclick="mostrar('cuentas')">Cuentas</a>
+        <a href="#" onclick="mostrar('tarjetas')">Tarjetas</a>
+        <a href="#" onclick="mostrar('prestamos')">Préstamos</a>
+        <a href="#" onclick="mostrar('digital')">Banca Digital</a>
+        <a href="#" onclick="mostrar('nosotros')">Nosotros</a>
+        <a href="#" onclick="mostrar('contacto')">Contacto</a>
+    </nav>
+
+    <button class="acceso" onclick="mensaje('Acceso Cliente')">
+        Acceso Cliente
+    </button>
+</header>
+
+
+<main>
+
+    <!-- INICIO -->
+    <section id="inicio" class="pagina activa">
+
+        <div class="hero">
+
+            <div class="hero-text">
+                <p class="subtitulo">BANCO NOVARD</p>
+
+                <h1>
+                    Tu dinero.<br>
+                    <span>Tus decisiones.</span>
+                </h1>
+
+                <p>
+                    Soluciones financieras creadas para ayudarte a
+                    administrar tu dinero, alcanzar tus metas y avanzar
+                    hacia un mejor futuro.
+                </p>
+
+                <button class="boton" onclick="mostrar('cuentas')">
+                    Conoce nuestros productos
+                </button>
+            </div>
+
+            <div class="tarjeta-principal">
+
+                <div class="tarjeta-arriba">
+                    <b>NOVARD</b>
+                    <span>PREMIUM</span>
+                </div>
+
+                <div class="chip"></div>
+
+                <div class="numero">
+                    5482 •••• •••• 7284
+                </div>
+
+                <div class="tarjeta-abajo">
+                    <span>NOVA CLIENT</span>
+                    <span>09/29</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="destacados">
+
+            <div class="destacado">
+                <h3>Cuenta Digital</h3>
+                <p>
+                    Administra tus fondos desde cualquier lugar.
+                </p>
+                <button onclick="mostrar('cuentas')">
+                    Ver cuentas →
+                </button>
+            </div>
+
+            <div class="destacado">
+                <h3>Tarjetas</h3>
+                <p>
+                    Opciones para tus compras y pagos diarios.
+                </p>
+                <button onclick="mostrar('tarjetas')">
+                    Ver tarjetas →
+                </button>
+            </div>
+
+            <div class="destacado">
+                <h3>Préstamos</h3>
+                <p>
+                    Financiamiento para tus proyectos personales.
+                </p>
+                <button onclick="mostrar('prestamos')">
+                    Conocer opciones →
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CUENTAS -->
+    <section id="cuentas" class="pagina">
+
+        <div class="titulo">
+            <p class="subtitulo">PRODUCTOS</p>
+            <h2>Cuentas para cada etapa</h2>
+            <p>
+                Elige la cuenta que mejor se adapte a tus necesidades.
+            </p>
+        </div>
+
+        <div class="productos">
+
+            <div class="producto">
+                <div class="icono">₱</div>
+                <h3>Cuenta Ahorro Nova</h3>
+
+                <p>
+                    Una cuenta diseñada para guardar tu dinero,
+                    organizar tus metas y administrar tus ahorros.
+                </p>
+
+                <button class="borde"
+                    onclick="mensaje('Cuenta Ahorro Nova')">
+                    Más información
+                </button>
+            </div>
+
+
+            <div class="producto">
+                <div class="icono">▣</div>
+
+                <h3>Cuenta Corriente</h3>
+
+                <p>
+                    Una solución para realizar movimientos frecuentes,
+                    pagos y operaciones financieras.
+                </p>
+
+                <button class="borde"
+                    onclick="mensaje('Cuenta Corriente')">
+                    Más información
+                </button>
+            </div>
+
+
+            <div class="producto">
+                <div class="icono">◈</div>
+
+                <h3>Cuenta Digital</h3>
+
+                <p>
+                    Una cuenta pensada para administrar tus fondos
+                    desde dispositivos digitales.
+                </p>
+
+                <button class="borde"
+                    onclick="mensaje('Cuenta Digital')">
+                    Más información
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TARJETAS -->
+    <section id="tarjetas" class="pagina">
+
+        <div class="titulo">
+            <p class="subtitulo">MEDIOS DE PAGO</p>
+
+            <h2>Tarjetas NovaRD</h2>
+
+            <p>
+                Compra y administra tus gastos de manera sencilla.
+            </p>
+        </div>
+
+
+        <div class="tarjetas-contenido">
+
+            <div class="tarjeta-visual">
+
+                <div class="tarjeta-arriba">
+                    <b>NOVARD</b>
+                    <span>VISA</span>
+                </div>
+
+                <div class="chip"></div>
+
+                <div class="numero">
+                    4539 •••• •••• 9021
+                </div>
+
+                <div class="tarjeta-abajo">
+                    <span>NOVA CLIENT</span>
+                    <span>12/30</span>
+                </div>
+
+            </div>
+
+
+            <div class="informacion">
+
+                <h3>Tarjeta de Crédito NovaRD</h3>
+
+                <p>
+                    Una herramienta de pago diseñada para realizar
+                    compras nacionales e internacionales.
+                </p>
+
+                <ul>
+                    <li>Control de consumos</li>
+                    <li>Consulta de movimientos</li>
+                    <li>Administración digital</li>
+                    <li>Bloqueo temporal</li>
+                </ul>
+
+                <button class="boton"
+                    onclick="mensaje('Solicitud de tarjeta')">
+                    Solicitar información
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRESTAMOS -->
+    <section id="prestamos" class="pagina">
+
+        <div class="titulo">
+
+            <p class="subtitulo">FINANCIAMIENTO</p>
+
+            <h2>Impulsa tus proyectos</h2>
+
+            <p>
+                Encuentra una alternativa para alcanzar tus objetivos.
+            </p>
+
+        </div>
+
+
+        <div class="productos">
+
+            <div class="producto">
+                <h3>Préstamo Personal</h3>
+
+                <p>
+                    Para proyectos personales, estudios, viajes
+                    o necesidades particulares.
+                </p>
+
+                <button class="borde"
+                    onclick="mensaje('Préstamo Personal')">
+                    Consultar
+                </button>
+            </div>
+
+
+            <div class="producto">
+                <h3>Préstamo Vehicular</h3>
+
+                <p>
+                    Una opción de financiamiento para adquirir
+                    un vehículo.
+                </p>
+
+                <button class="borde"
+                    onclick="mensaje('Préstamo Vehicular')">
+                    Consultar
+                </button>
+            </div>
+
+
+            <div class="producto">
+
+                <h3>Préstamo para Emprender</h3>
+
+                <p>
+                    Alternativa dirigida a pequeños negocios
+                    y proyectos de emprendimiento.
+                </p>
+
+                <button class="borde"
+                    onclick="mensaje('Préstamo para Emprender')">
+                    Consultar
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BANCA DIGITAL -->
+    <section id="digital" class="pagina">
+
+        <div class="digital">
+
+            <div>
+
+                <p class="subtitulo">NOVA DIGITAL</p>
+
+                <h2>Tu banco en tu bolsillo</h2>
+
+                <p>
+                    Consulta balances, revisa movimientos, realiza
+                    pagos y organiza tus finanzas desde una experiencia
+                    digital sencilla.
+                </p>
+
+                <div class="funciones">
+
+                    <span>✓ Consulta de balances</span>
+                    <span>✓ Transferencias</span>
+                    <span>✓ Pago de servicios</span>
+                    <span>✓ Control de tarjetas</span>
+
+                </div>
+
+                <button class="boton"
+                    onclick="mensaje('Banca Digital NovaRD')">
+                    Probar demostración
+                </button>
+
+            </div>
+
+
+            <div class="telefono">
+
+                <div class="pantalla">
+
+                    <small>Saldo disponible</small>
+
+                    <h3>RD$ 48,250.00</h3>
+
+                    <hr>
+
+                    <p>💸 Transferir</p>
+                    <p>💳 Mis tarjetas</p>
+                    <p>📱 Pagar servicios</p>
+                    <p>📊 Movimientos</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="pagina">
+
+        <div class="titulo">
+
+            <p class="subtitulo">BANCO NOVARD</p>
+
+            <h2>Sobre nosotros</h2>
+
+        </div>
+
+
+        <div class="sobre">
+
+            <p>
+                Banco NovaRD es una propuesta académica ficticia creada
+                como ejercicio de diseño y desarrollo web.
+            </p>
+
+            <p>
+                El objetivo del proyecto es presentar una arquitectura
+                de página bancaria moderna, organizada y funcional,
+                tomando como referencia general la estructura de los
+                servicios ofrecidos por instituciones bancarias, pero
+                utilizando una identidad visual y contenido propios.
+            </p>
+
+
+            <div class="valores">
+
+                <div>
+                    <h3>Confianza</h3>
+                    <p>
+                        Relaciones claras y responsables.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Innovación</h3>
+                    <p>
+                        Soluciones digitales sencillas.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Cercanía</h3>
+                    <p>
+                        Servicios pensados para las personas.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="pagina">
+
+        <div class="titulo">
+
+            <p class="subtitulo">ATENCIÓN</p>
+
+            <h2>Contáctanos</h2>
+
+            <p>
+                Envíanos una consulta mediante este formulario.
+            </p>
+
+        </div>
+
+
+        <form id="formulario">
+
+            <label>
+                Nombre
+
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Escribe tu nombre"
+                    required>
+            </label>
+
+
+            <label>
+                Correo electrónico
+
+                <input
+                    type="email"
+                    id="correo"
+                    placeholder="correo@ejemplo.com"
+                    required>
+            </label>
+
+
+            <label>
+                Mensaje
+
+                <textarea
+                    id="mensaje"
+                    placeholder="Escribe tu consulta"
+                    required></textarea>
+            </label>
+
+
+            <button class="boton" type="submit">
+                Enviar consulta
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        <h3>Banco NovaRD</h3>
+
+        <p>
+            Soluciones financieras para avanzar.
+        </p>
+    </div>
+
+    <div>
+        <p>
+            © 2026 Banco NovaRD
+        </p>
+
+        <small>
+            Proyecto académico ficticio.
+            No representa una institución financiera real.
+        </small>
+    </div>
+
+</footer>
+
+
+<div id="ventana" class="ventana">
+
+    <div class="ventana-contenido">
+
+        <button class="cerrar" onclick="cerrarVentana()">
+            ×
+        </button>
+
+        <h2 id="tituloVentana">
+            Información
+        </h2>
+
+        <p id="textoVentana">
+            Información del producto.
+        </p>
+
+        <button class="boton" onclick="cerrarVentana()">
+            Entendido
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
